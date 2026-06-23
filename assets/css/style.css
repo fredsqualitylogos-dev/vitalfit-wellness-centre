@@ -1,7 +1,5 @@
 /* ==============================
    VitalFit Wellness Centre
-   Custom CSS written for the assignment.
-   No external CSS framework is used.
    ============================== */
 
 :root {
@@ -209,7 +207,13 @@ html[data-active-page="contact"] .main-nav a[data-page="contact"] {
 }
 
 .hero-copy,
-.image-placeholder,
+.image-placeholder
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .service-card,
 .annotation-panel,
 .filter-box,
@@ -243,10 +247,8 @@ html[data-active-page="contact"] .main-nav a[data-page="contact"] {
     display: grid;
     place-items: center;
     text-align: center;
-    background:
-        linear-gradient(45deg, transparent 48%, #cccccc 49%, #cccccc 51%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, #cccccc 49%, #cccccc 51%, transparent 52%),
-        #fafafa;
+    background: #fafafa;
+    overflow: hidden;
 }
 
 .image-placeholder span,
