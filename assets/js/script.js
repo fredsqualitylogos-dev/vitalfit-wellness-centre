@@ -89,7 +89,8 @@ function setupClassFilters() {
     const noResults = document.getElementById("no-results");
     const cards = Array.from(document.querySelectorAll(".class-card"));
 
-    if (!classType || !difficulty || !time || !resultCount || !selectedFilters || cards.length === 0) {
+    // Require all controls to exist before proceeding to avoid runtime errors on pages without the filters
+    if (!classType || !difficulty || !time || !seniorFriendly || !lowImpact || !resetFilters || !resultCount || !selectedFilters || !noResults || cards.length === 0) {
         return;
     }
 
@@ -110,9 +111,9 @@ function setupClassFilters() {
         if (lowImpactChecked) activeTags.push("low-impact");
 
         cards.forEach((card) => {
-            const cardType = card.dataset.type;
-            const cardDifficulty = card.dataset.difficulty;
-            const cardTime = card.dataset.time;
+            const cardType = card.dataset.type || "";
+            const cardDifficulty = card.dataset.difficulty || "";
+            const cardTime = card.dataset.time || "";
 
             const matchesType = typeValue === "all" || cardType.includes(typeValue);
             const matchesDifficulty = difficultyValue === "all" || cardDifficulty === difficultyValue;
@@ -178,20 +179,25 @@ function setupBookingPage() {
         return;
     }
 
+    const nameInput = document.getElementById("full-name");
+    const emailInput = document.getElementById("email");
+    const nameError = document.getElementById("name-error");
+    const emailError = document.getElementById("email-error");
+    const successMessage = document.getElementById("booking-success");
+
+    // Ensure expected elements exist before attaching handlers
+    if (!nameInput || !emailInput || !nameError || !emailError || !successMessage) {
+        return;
+    }
+
     if (saveProgressButton) {
         saveProgressButton.addEventListener("click", () => {
-            document.getElementById("booking-success").textContent = "Your progress has been saved on this device.";
+            successMessage.textContent = "Your progress has been saved on this device.";
         });
     }
 
     bookingForm.addEventListener("submit", (event) => {
         event.preventDefault();
-
-        const nameInput = document.getElementById("full-name");
-        const emailInput = document.getElementById("email");
-        const nameError = document.getElementById("name-error");
-        const emailError = document.getElementById("email-error");
-        const successMessage = document.getElementById("booking-success");
 
         nameError.textContent = "";
         emailError.textContent = "";
@@ -236,6 +242,11 @@ function setupContactPage() {
         const messageError = document.getElementById("message-error");
         const success = document.getElementById("contact-success");
 
+        // Ensure expected elements exist before validation
+        if (!name || !email || !message || !nameError || !emailError || !messageError || !success) {
+            return;
+        }
+
         nameError.textContent = "";
         emailError.textContent = "";
         messageError.textContent = "";
@@ -273,6 +284,7 @@ function setupFaqAccordion() {
     questions.forEach((button) => {
         button.addEventListener("click", () => {
             const answer = button.nextElementSibling;
+            if (!answer) return;
             const expanded = button.getAttribute("aria-expanded") === "true";
 
             button.setAttribute("aria-expanded", String(!expanded));
