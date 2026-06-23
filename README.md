@@ -1,4 +1,5 @@
 # VitalFit Wellness Centre
+by Frederick Sappor
 
 VitalFit Wellness Centre is a responsive front-end website prototype based on the Assignment 1 wireframes. The website supports users who want to view fitness services, filter classes, book a session and contact the centre for help.
 
