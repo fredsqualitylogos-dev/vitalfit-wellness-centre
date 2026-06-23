@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalFit Wellness Centre | Contact</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <script>
+        document.documentElement.dataset.activePage = "contact";
+    </script>
+
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="VitalFit homepage">VitalFit</a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="classes.html" data-page="classes">Classes</a>
+            <a href="booking.html" data-page="booking">Book Class</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+        </nav>
+
+        <div class="accessibility-controls" aria-label="Accessibility controls">
+            <button type="button" id="large-text-toggle" class="control-button">A+</button>
+            <button type="button" id="contrast-toggle" class="control-button">Contrast</button>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        <section class="wireframe-page">
+            <div class="browser-line">vitalfit.co.uk / Contact</div>
+
+            <div class="contact-layout">
+                <section class="faq-box" aria-labelledby="faq-title">
+                    <h1 id="faq-title">Frequently Asked Questions</h1>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            How do I book a class?
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>Go to the Classes page, choose a class and complete the booking form.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            Can I change my booking?
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>You can contact VitalFit using the support form to request a booking change.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            Do you offer senior sessions?
+                        </button>
+                        <div class="faq-answer" hidden>
+                            <p>Yes. The Senior Mobility and Wellness Walk Club sessions are designed for senior users.</p>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder" role="img" aria-label="Map placeholder showing VitalFit address and nearest bus stop">
+                        <span>Map / centre location</span>
+                        <small>Alt text: VitalFit address and nearest bus stop</small>
+                    </div>
+                </section>
+
+                <section class="contact-form-box" aria-labelledby="contact-title">
+                    <h2 id="contact-title">Contact form</h2>
+
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                            <p class="error-message" id="contact-name-error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="contact-email" name="contact-email" required>
+                            <p class="error-message" id="contact-email-error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <p class="error-message" id="message-error"></p>
+                        </div>
+
+                        <div class="button-row">
+                            <button type="submit" class="primary-button">Send message</button>
+                            <a class="secondary-button" href="tel:+441234567890">Call VitalFit</a>
+                        </div>
+
+                        <p class="success-message" id="contact-success" role="status"></p>
+                    </form>
+                </section>
+            </div>
+
+            <section class="annotation-panel">
+                <h2>WAI-ARIA use</h2>
+                <p>FAQ accordions use expanded and collapsed states so screen readers can understand what is open.</p>
+            </section>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div>
+            <strong>VitalFit Wellness Centre</strong>
+            <p>Accessible fitness, class booking and wellness support.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="contact.html">Accessibility Statement</a>
+            <a href="contact.html">Privacy</a>
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG guidance</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

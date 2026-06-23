@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalFit Wellness Centre | Classes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <script>
+        document.documentElement.dataset.activePage = "classes";
+    </script>
+
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="VitalFit homepage">VitalFit</a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="classes.html" data-page="classes">Classes</a>
+            <a href="booking.html" data-page="booking">Book Class</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+        </nav>
+
+        <div class="accessibility-controls" aria-label="Accessibility controls">
+            <button type="button" id="large-text-toggle" class="control-button">A+</button>
+            <button type="button" id="contrast-toggle" class="control-button">Contrast</button>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        <section class="wireframe-page">
+            <div class="browser-line">vitalfit.co.uk / Classes</div>
+
+            <div class="classes-layout">
+                <aside class="filter-box" aria-labelledby="filter-title">
+                    <h1 id="filter-title">Filters</h1>
+
+                    <label for="class-type">Class type</label>
+                    <select id="class-type" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="cardio">Cardio</option>
+                        <option value="senior">Senior-friendly</option>
+                        <option value="low-impact">Low-impact</option>
+                    </select>
+
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="gentle">Gentle</option>
+                    </select>
+
+                    <label for="time">Time</label>
+                    <select id="time" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="morning">Morning</option>
+                        <option value="evening">Evening</option>
+                    </select>
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="senior-friendly" value="senior">
+                        <label for="senior-friendly">Senior-friendly</label>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="low-impact" value="low-impact">
+                        <label for="low-impact">Low-impact</label>
+                    </div>
+
+                    <button type="button" class="primary-button full-width" id="reset-filters">Reset filters</button>
+                </aside>
+
+                <section class="results-box" aria-live="polite">
+                    <div class="results-heading">
+                        <div>
+                            <p class="small-label">Available classes</p>
+                            <h2><span id="result-count">6</span> results</h2>
+                        </div>
+
+                        <div class="selected-filters" id="selected-filters">
+                            <span>All classes</span>
+                        </div>
+                    </div>
+
+                    <article class="class-card" data-type="beginner low-impact" data-difficulty="beginner" data-time="morning">
+                        <div>
+                            <h3>Beginner Yoga</h3>
+                            <p>Mon 10:00 • Low-impact • Beginner</p>
+                            <p>A calm class for first-time visitors and users building confidence.</p>
+                        </div>
+                        <a class="secondary-button" href="booking.html?class=Beginner%20Yoga">View details</a>
+                    </article>
+
+                    <article class="class-card" data-type="cardio" data-difficulty="intermediate" data-time="evening">
+                        <div>
+                            <h3>Cardio Blast</h3>
+                            <p>Tue 18:30 • Intermediate</p>
+                            <p>A faster class for returning users who want an organised routine.</p>
+                        </div>
+                        <a class="secondary-button" href="booking.html?class=Cardio%20Blast">View details</a>
+                    </article>
+
+                    <article class="class-card" data-type="senior low-impact" data-difficulty="gentle" data-time="morning">
+                        <div>
+                            <h3>Senior Mobility</h3>
+                            <p>Wed 11:00 • Senior-friendly • Gentle</p>
+                            <p>Designed for mobility, balance and accessible movement.</p>
+                        </div>
+                        <a class="secondary-button" href="booking.html?class=Senior%20Mobility">View details</a>
+                    </article>
+
+                    <article class="class-card" data-type="beginner" data-difficulty="beginner" data-time="evening">
+                        <div>
+                            <h3>Starter Circuits</h3>
+                            <p>Thu 17:00 • Beginner</p>
+                            <p>Simple exercise stations with instructor guidance.</p>
+                        </div>
+                        <a class="secondary-button" href="booking.html?class=Starter%20Circuits">View details</a>
+                    </article>
+
+                    <article class="class-card" data-type="low-impact" data-difficulty="gentle" data-time="morning">
+                        <div>
+                            <h3>Pilates Basics</h3>
+                            <p>Fri 12:00 • Low-impact • Gentle</p>
+                            <p>Controlled movement and core support at a steady pace.</p>
+                        </div>
+                        <a class="secondary-button" href="booking.html?class=Pilates%20Basics">View details</a>
+                    </article>
+
+                    <article class="class-card" data-type="senior" data-difficulty="gentle" data-time="morning">
+                        <div>
+                            <h3>Wellness Walk Club</h3>
+                            <p>Sat 09:30 • Senior-friendly</p>
+                            <p>A social wellness session for regular users.</p>
+                        </div>
+                        <a class="secondary-button" href="booking.html?class=Wellness%20Walk%20Club">View details</a>
+                    </article>
+
+                    <p class="no-results" id="no-results" hidden>No matching classes found. Try removing a filter.</p>
+                </section>
+            </div>
+
+            <section class="annotation-panel">
+                <h2>System response</h2>
+                <p>The results count updates when filters are selected. Selected filters are shown and can be reset.</p>
+            </section>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div>
+            <strong>VitalFit Wellness Centre</strong>
+            <p>Accessible fitness, class booking and wellness support.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="contact.html">Accessibility Statement</a>
+            <a href="contact.html">Privacy</a>
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG guidance</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

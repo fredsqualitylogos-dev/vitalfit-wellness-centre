@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalFit Wellness Centre | Booking</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <script>
+        document.documentElement.dataset.activePage = "booking";
+    </script>
+
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="VitalFit homepage">VitalFit</a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="classes.html" data-page="classes">Classes</a>
+            <a href="booking.html" data-page="booking">Book Class</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+        </nav>
+
+        <div class="accessibility-controls" aria-label="Accessibility controls">
+            <button type="button" id="large-text-toggle" class="control-button">A+</button>
+            <button type="button" id="contrast-toggle" class="control-button">Contrast</button>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        <section class="wireframe-page narrow-page">
+            <div class="browser-line">vitalfit.co.uk / Book Class</div>
+
+            <a class="back-link" href="classes.html">&lt; Back to classes</a>
+
+            <section class="booking-box" aria-labelledby="booking-title">
+                <p class="small-label">Step 2 of 3: Your details</p>
+                <h1 id="booking-title">Book your class</h1>
+
+                <div class="selected-class">
+                    <strong>Selected class:</strong>
+                    <span id="selected-class-name">Beginner Yoga, Mon 10:00</span>
+                </div>
+
+                <form id="booking-form" novalidate>
+                    <div class="form-group">
+                        <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="full-name" name="full-name" autocomplete="name" required>
+                        <p class="error-message" id="name-error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                        <p class="error-message" id="email-error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile number <span class="optional-text">Optional</span></label>
+                        <input type="tel" id="mobile" name="mobile" autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accessibility-request">Accessibility request</label>
+                        <textarea id="accessibility-request" name="accessibility-request" rows="4" placeholder="Large text, mobility support, screen-reader support or other needs"></textarea>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="reminder" name="reminder">
+                        <label for="reminder">Send me a reminder before the class</label>
+                    </div>
+
+                    <div class="button-row">
+                        <button type="submit" class="primary-button">Confirm Booking</button>
+                        <button type="button" class="secondary-button" id="save-progress">Save progress</button>
+                    </div>
+
+                    <p class="success-message" id="booking-success" role="status"></p>
+                </form>
+            </section>
+
+            <section class="annotation-panel">
+                <h2>Accessible form notes</h2>
+                <ol>
+                    <li>Every field has a visible label.</li>
+                    <li>Error messages appear close to the related field.</li>
+                    <li>Buttons are large for mouse, touch and keyboard users.</li>
+                </ol>
+            </section>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div>
+            <strong>VitalFit Wellness Centre</strong>
+            <p>Accessible fitness, class booking and wellness support.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="contact.html">Accessibility Statement</a>
+            <a href="contact.html">Privacy</a>
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG guidance</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

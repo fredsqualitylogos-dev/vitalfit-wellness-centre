@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalFit Wellness Centre | Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <script>
+        document.documentElement.dataset.activePage = "home";
+    </script>
+
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="VitalFit homepage">VitalFit</a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="classes.html" data-page="classes">Classes</a>
+            <a href="booking.html" data-page="booking">Book Class</a>
+            <a href="contact.html" data-page="contact">Contact</a>
+        </nav>
+
+        <div class="accessibility-controls" aria-label="Accessibility controls">
+            <button type="button" id="large-text-toggle" class="control-button">A+</button>
+            <button type="button" id="contrast-toggle" class="control-button">Contrast</button>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        <section class="wireframe-page">
+            <div class="browser-line">vitalfit.co.uk / Home</div>
+
+            <section class="hero-grid" aria-labelledby="home-title">
+                <div class="hero-copy">
+                    <p class="small-label">Hero section</p>
+                    <h1 id="home-title">Feel stronger, move better</h1>
+                    <p>
+                        VitalFit is an accessible fitness and wellness centre website.
+                        Users can view services, find suitable classes and book support online.
+                    </p>
+
+                    <div class="button-row">
+                        <a class="primary-button" href="booking.html">Get Started Now</a>
+                        <a class="secondary-button" href="classes.html">View Classes</a>
+                    </div>
+
+                    <button type="button" class="outline-button" id="open-tour">
+                        Open website guide
+                    </button>
+                </div>
+
+                <div class="image-placeholder" role="img" aria-label="Fitness and wellness image placeholder with alt text required">
+                    <span>Image area</span>
+                    <small>alt text required</small>
+                </div>
+            </section>
+
+            <section class="service-grid" aria-labelledby="services-title">
+                <h2 id="services-title" class="visually-hidden">VitalFit services</h2>
+
+                <article class="service-card">
+                    <h3>Personal Training</h3>
+                    <p>One-to-one sessions for users who need personalised workout support.</p>
+                    <a href="booking.html">Book support</a>
+                </article>
+
+                <article class="service-card">
+                    <h3>Group Classes</h3>
+                    <p>Beginner, cardio, low-impact and senior-friendly sessions.</p>
+                    <a href="classes.html">View timetable</a>
+                </article>
+
+                <article class="service-card">
+                    <h3>Nutrition Guidance</h3>
+                    <p>Simple guidance to support healthier routines and fitness goals.</p>
+                    <a href="contact.html">Ask a question</a>
+                </article>
+            </section>
+
+            <section class="annotation-panel" aria-labelledby="home-annotations">
+                <h2 id="home-annotations">Wireframe notes</h2>
+                <ol>
+                    <li><strong>Accessibility:</strong> A+ and Contrast controls support Mary.</li>
+                    <li><strong>Usability:</strong> Main CTAs are above the fold for Aisha.</li>
+                    <li><strong>Ease of learning:</strong> service cards help users understand the site quickly.</li>
+                </ol>
+            </section>
+        </section>
+
+        <div class="modal" id="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tour-title" aria-hidden="true">
+            <div class="modal-box">
+                <button type="button" class="modal-close" id="close-tour" aria-label="Close website guide">×</button>
+                <h2 id="tour-title">Website guide</h2>
+                <p>
+                    This pop-up is user controlled. Use the Classes page to filter sessions,
+                    the Booking page to submit a class request, and the Contact page for FAQs.
+                </p>
+                <a class="primary-button" href="classes.html">Go to Classes</a>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div>
+            <strong>VitalFit Wellness Centre</strong>
+            <p>Accessible fitness, class booking and wellness support.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="contact.html">Accessibility Statement</a>
+            <a href="contact.html">Privacy</a>
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG guidance</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
